@@ -110,6 +110,8 @@ target_include_directories(
         "${PROJECT_SOURCE_DIR}/external/include"
         # For including compiled shaders
         "${CMAKE_CURRENT_BINARY_DIR}"
+        # For <openxr/openxr.h> and other openxr headers
+        "${CMAKE_CURRENT_BINARY_DIR}/../../../include"
 )
 
 target_link_libraries(hello_xr PRIVATE OpenXR::openxr_loader)
